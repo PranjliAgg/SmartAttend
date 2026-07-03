@@ -2,26 +2,24 @@ import streamlit as st
 
 def header_home():
     logo_url = "https://github.com/shradha-khapra/ai-attendance-project-landing/blob/main/static/img/logo.png?raw=true"
-    logo_path = "src/img/logo_transparent.png"
-
-    col1, col2 = st.columns([2, 5])
-
-    with col1:
-        st.image(logo_path, width=100)
-
-
-    with col2:
-        st.markdown(
-            """
-            <h1 style="color:#213448;">SmartAttend</h1>
-            """,
-            unsafe_allow_html=True,
-        )
 
     st.markdown(
-        """
-        <h3 style="color: #213448;">AI-Powered Attendance System</h3>
-        <p style="color: #213448;">Automating attendance using face recognition and voice verification to eliminate proxy entries</p>
-        """,
-        unsafe_allow_html=True
+        f"""
+        <div style="display: flex; flex-direction: column; align-items:center; justify-content:center; margin-bottom:30px; margin-top:0px">
+            <img src='{logo_url}' style='height: 100px;'>
+            <h1 style='text-align: center; color: #213448'>SNAP<br>CLASS</h1>
+        </div>
+        """, unsafe_allow_html=True
+    )
+
+def header_dashboard():
+    logo_url = "https://github.com/shradha-khapra/ai-attendance-project-landing/blob/main/static/img/logo.png?raw=true"
+
+    st.markdown(
+        f"""
+        <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-top:0px">
+            <img src='{logo_url}' style='height: 85px;'>
+            <h2 style='color: #213448'>SNAP<br>CLASS</h1>
+        </div>
+        """, unsafe_allow_html=True
     )

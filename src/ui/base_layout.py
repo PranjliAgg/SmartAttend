@@ -25,7 +25,7 @@ def style_bg_dashboard():
         <style>
                 
                 .stApp {
-                    background: #F1F7D4;
+                    background: #EAE0CF;
                 }
 
         </style>
@@ -73,7 +73,7 @@ def style_base_layout():
 
                 button{
                     border-radius: 1.5rem !important;
-                    background: #F1F7D4 !important;
+                    background: #213448 !important;
                     color: white !important;
                     padding: 10px 20px !important;
                     border: none !important;
@@ -82,7 +82,7 @@ def style_base_layout():
 
                 button[kind="secondary"]{
                     border-radius: 1.5rem !important;
-                    background: #213448 !important;
+                    background: #547792 !important;
                     color: white !important;
                     padding: 10px 20px !important;
                     border: none !important;

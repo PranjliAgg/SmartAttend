@@ -25,7 +25,7 @@ def style_bg_dashboard():
         <style>
                 
                 .stApp {
-                    background: #EAE0CF;
+                    background-color: #EAE0CF;
                 }
 
         </style>
@@ -42,10 +42,10 @@ def style_base_layout():
                 @import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&display=swap');
 
-                /* Hide Toolbar */
-                #MainMenu, footer, header{
-                    visibility: hidden;
-                }
+                # /* Hide Toolbar */
+                # #MainMenu, footer, header{
+                #     visibility: hidden;
+                # }
 
                 .block-container{
                     padding-top: 1.5rem !important;
@@ -73,7 +73,7 @@ def style_base_layout():
 
                 button{
                     border-radius: 1.5rem !important;
-                    background: #213448 !important;
+                    background-color: #213448 !important;
                     color: white !important;
                     padding: 10px 20px !important;
                     border: none !important;
@@ -82,7 +82,7 @@ def style_base_layout():
 
                 button[kind="secondary"]{
                     border-radius: 1.5rem !important;
-                    background: #547792 !important;
+                    background-color: #547792 !important;
                     color: white !important;
                     padding: 10px 20px !important;
                     border: none !important;
@@ -92,7 +92,7 @@ def style_base_layout():
 
                 button[kind="tertiary"]{
                     border-radius: 1.5rem !important;
-                    background: black !important;
+                    background-color: black !important;
                     color: white !important;
                     padding: 10px 20px !important;
                     border: none !important;

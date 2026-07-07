@@ -29,13 +29,16 @@ def student_dashboard():
             del st.session_state.student_data
             st.rerun()
 
-    st.space()
+    st.divider()
 
-    st.subheader(f"Welcome {student_data["name"]}")
+    st.markdown(
+        f'<h2 style="text-align: center;">Welcome {student_data["name"]} !</h2>', 
+        unsafe_allow_html=True
+    )
 
-    st.space()
+    st.divider()
 
-    c1, c2 = st.columns(2)
+    c1, c2 = st.columns(2, vertical_alignment="center")
 
     with c1:
         st.header("Your Enrolled Subjects")
@@ -44,7 +47,7 @@ def student_dashboard():
         if st.button("Enroll in subject", type="primary", width="stretch"):
             enroll_dialog()
 
-    st.divider()
+    st.space()
 
     with st.spinner("Loading your Subjects.."):
         subjects = get_student_subjects(student_id)
@@ -111,9 +114,10 @@ def student_screen():
             st.session_state["login_type"] = None
             st.rerun()
 
+    st.divider()
+
     st.header("Login using Face ID", text_alignment="center")
 
-    st.space()
     st.space()
 
     show_registration = False

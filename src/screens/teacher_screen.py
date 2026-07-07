@@ -49,9 +49,12 @@ def teacher_dashboard():
             del st.session_state.teacher_data
             st.rerun()
 
-    st.space()
+    st.divider()
 
-    st.subheader(f"Welcome {teacher_data["name"]}")
+    st.markdown(
+        f'<h2 style="text-align: center;">Welcome {teacher_data["name"]} !</h2>', 
+        unsafe_allow_html=True
+    )
 
     st.space()
 
@@ -296,15 +299,14 @@ def teacher_screen_login():
             st.session_state["login_type"] = None
             st.rerun()
 
-    st.header("Login using password", text_alignment="center")
+    st.divider()
 
-    st.space()
-    st.space()
+    st.header("Login using password", text_alignment="center")
 
     teacher_username = st.text_input("Enter username", placeholder="@johndoe")
     teacher_pass = st.text_input("Enter password", type="password", placeholder="example$123")
 
-    st.divider()
+    st.space()
 
     btncl1, btncl2 = st.columns(2)
 
@@ -353,11 +355,10 @@ def teacher_screen_register():
         if st.button("Go back to Home", key="loginbackbtn", type="primary", shortcut="control+backspace"):
             st.session_state["login_type"] = None
             st.rerun()
+
+    st.divider()
             
     st.header("Register as a Teacher", text_alignment="center")
-
-    st.space()
-    st.space()
 
     teacher_username = st.text_input("Enter username", placeholder="@johndoe")
     teacher_name = st.text_input("Enter name", placeholder="John Doe")
@@ -382,5 +383,3 @@ def teacher_screen_register():
                 st.rerun()
             else:
                 st.error(message)
-
-    st.divider()
